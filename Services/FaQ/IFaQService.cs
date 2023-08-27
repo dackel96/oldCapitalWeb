@@ -7,7 +7,7 @@
     public interface IFaQService
     {
 
-        public Task<IEnumerable<FaQViewModel>> GetAllFaQAsync(IQueryable<FaQ> faqQuery);
+        public Task<IEnumerable<FaQViewModel>> GetAllFaQAsync();
 
         public Task GetSingleFaQAsync(Guid id);
 

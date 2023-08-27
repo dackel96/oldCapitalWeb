@@ -13,9 +13,11 @@
             this.faqService = faqService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var allFaQ = await faqService.GetAllFaQAsync(); 
+
+            return View(allFaQ);
         }
 
         [HttpGet]

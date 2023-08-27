@@ -1,1 +1,24 @@
-﻿
+﻿@model FaQViewModel
+
+@{
+    ViewBag.Title = "Create new FAQ";
+}
+
+<div class="text-center bg-dark text-white rounded">
+    <h1 class="display-4">@ViewBag.Title</h1>
+</div>
+<div class="row-md-4 bg-dark text-white rounded-3 text-center">
+    <div class="col-md-4 offset-md-4">
+        <form>
+            <div class="mb-3">
+                <label class="form-label mt-5" for="textAreaExample">Question</label>
+                <textarea class="form-control" id="textAreaExample1" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="textAreaExample">Answer</label>
+                <textarea class="form-control" id="textAreaExample1" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mb-5">Create</button>
+        </form>
+    </div>
+</div>

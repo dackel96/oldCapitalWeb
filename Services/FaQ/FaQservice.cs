@@ -18,11 +18,11 @@ namespace oldCapitalWeb.Services.FaQ
             this.mapper = mapper;
         }
 
-        public async Task<IEnumerable<FaQViewModel>> GetAllFaQAsync(IQueryable<FaQ> faqQuery)
-        => await faqQuery.ProjectTo<FaQViewModel>(this.mapper.ConfigurationProvider).ToListAsync();
+        public async Task<IEnumerable<FaQViewModel>> GetAllFaQAsync()
+        => await this.data.FaQs.ProjectTo<FaQViewModel>(this.mapper.ConfigurationProvider).ToListAsync();
 
 
-        public Task AddFaQAsync(string question, string answer)
+        public async Task AddFaQAsync(string question, string answer)
         {
             var newFaQ = new FaQ
             {
@@ -30,10 +30,10 @@ namespace oldCapitalWeb.Services.FaQ
                 Answer = answer
             };
 
-            this.data.FaQs.Add(newFaQ);
-            this.data.SaveChanges();
+            await this.data.FaQs.AddAsync(newFaQ);
+            await this.data.SaveChangesAsync();
 
-            return Task.CompletedTask;
+            return;
         }
 
         public Task DeleteFaQAsync(Guid id)
