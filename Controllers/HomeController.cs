@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using oldCapitalWeb.Models;
-using System.Diagnostics;
-
-namespace oldCapitalWeb.Controllers
+﻿namespace oldCapitalWeb.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using oldCapitalWeb.Models;
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

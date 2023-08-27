@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using oldCapitalWeb.Data.Models;
-
-namespace oldCapitalWeb.Data
+﻿namespace oldCapitalWeb.Data
 {
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
+    using oldCapitalWeb.Data.Models;
+
     public class ApplicationDbContext : IdentityDbContext
     {
 

@@ -1,8 +1,9 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace oldCapitalWeb.Data.Models
+﻿namespace oldCapitalWeb.Data.Models
 {
+    using MongoDB.Bson;
+
+    using MongoDB.Bson.Serialization.Attributes;
+
     public class Image
     {
         [BsonRepresentation(BsonType.ObjectId)]
