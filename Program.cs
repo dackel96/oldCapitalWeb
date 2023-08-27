@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using oldCapitalWeb.Data;
+using oldCapitalWeb.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +24,13 @@ builder.Services
     })
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services
     .AddControllersWithViews();
+
+builder.Services
+    .AddApplicationServices();
 
 var app = builder.Build();
 

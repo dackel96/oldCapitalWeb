@@ -2,7 +2,7 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    public class AboutUs : Controller
+    public class AboutUsController : Controller
     {
         public IActionResult Index()
         {
