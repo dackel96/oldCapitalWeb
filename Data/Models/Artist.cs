@@ -16,7 +16,7 @@
         [MaxLength(DescriptionMaxLength)]
         public string Description { get; set; } = null!;
 
-        public ICollection<string> MediaLinks { get; set; } = new List<string>();
+        public string? MediaLink { get; set; }
 
     }
 }

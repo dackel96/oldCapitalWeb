@@ -11,7 +11,15 @@
             : base(options)
         {
         }
-        public DbSet<Article> Articles { get; init; }
+        public DbSet<Article> Articles { get; init; } = null!;
+
+        public DbSet<Message> Messages { get; init; } = null!;
+
+        public DbSet<ContactUs> Contacts { get; init; } = null!;
+
+        public DbSet<Artist> Artists { get; init; } = null!;
+
+        public DbSet<FaQ> FaQs { get; init; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
