@@ -2,20 +2,30 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using oldCapitalWeb.Models;
+    using oldCapitalWeb.Services.Home;
     using System.Diagnostics;
-
+    using static ArticleConstants.Constants.HomePageArticles;
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+        private readonly IArticleService articleService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IArticleService articleService)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.articleService = articleService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var upperArticle = new ArticleViewModel
+            {
+                Id = FrontEndId,
+                Title = FirstArticleTitle,
+                Text = FirstArticleText,
+            };
+
+            return View(upperArticle);
         }
 
         public IActionResult Privacy()

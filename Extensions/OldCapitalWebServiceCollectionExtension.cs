@@ -1,4 +1,6 @@
-﻿using oldCapitalWeb.Services.FaQ;
+﻿using oldCapitalWeb.Services.Articles;
+using oldCapitalWeb.Services.FaQ;
+using oldCapitalWeb.Services.Home;
 
 namespace oldCapitalWeb.Extensions
 {
@@ -6,7 +8,9 @@ namespace oldCapitalWeb.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            services.AddScoped<IFaQService,FaQservice>();
+            services.AddScoped<IFaQService, FaQservice>();
+
+            services.AddScoped<IArticleService, ArticleService>();
 
             return services;
         }

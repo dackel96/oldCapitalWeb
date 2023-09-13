@@ -1,8 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Old Capital";
+﻿@model ArticleViewModel;
+
+@{
+    ViewBag.Title = "Old Capital Tatto";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center bg-dark text-white rounded">
+    <h1 class="display-4">@ViewBag.Title</h1>
 </div>
+
+<div class="mt-5">
+    <article class="row-cols-2">
+        <h2>@Model.Title</h2>
+
+        <ul class="bg-black bg-opacity-50 text-white rounded-2 p-3" style="list-style-type: none">
+            <li>
+                @Model.Text
+            </li>
+        </ul>
+    </article>
+</div>
+
