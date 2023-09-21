@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
 html {
     font-size: 14px;
 }
@@ -15,7 +17,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-color: plum;
+    background-color: #06191D;
 }
 
 
@@ -27,3 +29,30 @@ body {
 .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
 }
+
+.card-img-top {
+    width: 350px;
+    height: 400px;
+    float: right;
+    border-radius: 50%;
+    margin-right: -55px;
+}
+
+.text-custom {
+    color: #E6E6FA;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+}
+
+.custom-img {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    transition: opacity 0.5s ease-in-out;
+}
+
+    .custom-img:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+

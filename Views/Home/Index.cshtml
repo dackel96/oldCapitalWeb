@@ -5,15 +5,15 @@
 }
 
 <div class="text-center bg-dark text-white rounded">
-    <h1 class="display-4">@ViewBag.Title</h1>
+    <h1 class="text-custom display-4 p-1">@ViewBag.Title</h1>
 </div>
 
 <div class="mt-5">
     <article class="row-cols-2">
-        <h2>@Model.Title</h2>
-
-        <ul class="bg-black bg-opacity-50 text-white rounded-2 p-3" style="list-style-type: none">
-            <li>
+        <h2 class="text-custom">@Model.Title</h2>
+        <img src="/images/henna.jpg" class="custom-img card-img-top rounded-circle">
+        <ul class="text-custom rounded-2 p-3" style="list-style-type: none">
+            <li class="background-hover">
                 @Model.Text
             </li>
         </ul>
