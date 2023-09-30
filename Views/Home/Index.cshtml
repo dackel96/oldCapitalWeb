@@ -4,16 +4,12 @@
     ViewBag.Title = "Old Capital Tatto";
 }
 
-<div class="text-center bg-dark text-white rounded">
-    <h1 class="text-custom display-4 p-1">@ViewBag.Title</h1>
-</div>
-
 <div class="mt-5">
     <article class="row-cols-2">
-        <h2 class="text-custom">@Model.Title</h2>
+        <h2 class="text-custom custom-title">@Model.Title</h2>
         <img src="/images/henna.jpg" class="custom-img card-img-top rounded-circle">
         <ul class="text-custom rounded-2 p-3" style="list-style-type: none">
-            <li class="background-hover">
+            <li class="custom-wrap">
                 @Model.Text
             </li>
         </ul>
