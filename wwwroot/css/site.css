@@ -71,6 +71,7 @@ body {
 
 .custom-title {
     margin-left: 25px;
+    margin-bottom: 30px;
 }
 
 .accordion-button:focus {
@@ -82,6 +83,10 @@ body {
 .wraper-contact {
     display: flex;
     flex-direction: row;
+    background-image: url("/images/contactus-bg.jpg");
+    overflow: auto;
+    background-size: cover;
+    height: 100vh;
 }
 
     .wraper-contact iframe {
@@ -95,6 +100,7 @@ body {
 
     .wraper-contact form {
         flex-basis: 50%;
+        margin-left: 25px;
     }
 
 .contact-nav {
@@ -127,10 +133,31 @@ body::-webkit-scrollbar {
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
+    background-image: url("/images/pattern-home.jpg");
+    background-size: cover;
 }
 
 .nav-link {
     text-align: center;
     margin-top: 35.8px;
     font-size: 1rem;
+}
+
+.custom-faq {
+    background-image: url("/images/FAQ-photo.jpg");
+    overflow: auto;
+    height: 100vh;
+    background-size: cover;
+}
+
+.custom-homebg {
+    background-image: url("/images/pattern-home.jpg");
+    overflow: auto;
+    background-size: cover;
+}
+
+.footer {
+    background-image: url("/images/pattern-home-footer.jpg");
+    overflow: auto;
+    background-size: cover;
 }

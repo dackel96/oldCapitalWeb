@@ -1,39 +1,40 @@
 ﻿@model IEnumerable<FaQViewModel>;
 
 @{
-    ViewBag.Title = "FAQ";
+    ViewBag.Title = "-FAQ-";
 }
-
-<div class="accordion m-5">
-    @foreach (var faq in Model)
-    {
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#@faq.Id" aria-controls="@faq.Id">
-                    @faq.Question
-                </button>
-            </h2>
-            <div id="@faq.Id" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                    @faq.Answer
+<div class="custom-faq">
+    <div class="accordion m-5">
+        @foreach (var faq in Model)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#@faq.Id" aria-controls="@faq.Id">
+                        @faq.Question
+                    </button>
+                </h2>
+                <div id="@faq.Id" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        @faq.Answer
+                    </div>
                 </div>
+                @if (faq == Model.FirstOrDefault())
+                {
+                        <script>
+                            $(document).ready(function () {
+                                $('#@faq.Id').addClass('show');
+                            });
+                        </script>
+                }
             </div>
-            @if (faq == Model.FirstOrDefault())
-            {
-                <script>
-                    $(document).ready(function () {
-                        $('#@faq.Id').addClass('show');
-                    });
-                </script>
-            }
-        </div>
-    }
-    <script>
-        $(document).ready(function () {
-            $('#accordion .accordion-item:first-child .accordion-collapse').addClass('show');
-            $('#accordion .accordion-collapse').on('click', function () {
-                $(this).toggleClass('show');
-            });
-        });
-    </script>
+        }
+    </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#accordion .accordion-item:first-child .accordion-collapse').addClass('show');
+        $('#accordion .accordion-collapse').on('click', function () {
+            $(this).toggleClass('show');
+        });
+    });
+</script>

@@ -1,8 +1,10 @@
-﻿
-<div class="row-cols-2 wraper-contact">
+﻿@{
+    ViewData["Title"] = "-Contact Us-";
+}
 
+<div class="wraper-contact">
     <form method="post" enctype="multipart/form-data">
-        <div class="mb-3 text-center">
+        <div class="mb-3 mt-3 text-center">
             <label class="form-label text-custom">Your Name</label>
             <input class="form-control text-bg-secondary" aria-required="true" />
             <span class="text-danger"></span>
@@ -15,13 +17,11 @@
         <div class="mb-3 text-center">
             <input class="btn btn-primary" type="submit" value="Send" />
         </div>
+        <a class="text-danger"># Phone Number: 0895792078</a>
+        <a class="text-danger"># Work Time : from 09:30AM to 19:30PM</a>
     </form>
     <div class="row-cols-2">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2914.020897922721!2d25.6304577441776!3d43.083055995165395!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a92778524c66a3%3A0x52ba16deaa4312e!2sOld%20Capital%20Tattoo%20Shop!5e0!3m2!1sbg!2sbg!4v1668721242090!5m2!1sbg!2sbg" width="750" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 
-<div class="card-footer text-danger">
-    <a># Phone Number: 0895792078</a>
-    <a># Work Time : from 09:30AM to 19:30PM</a>
-</div>
