@@ -132,7 +132,7 @@ body::-webkit-scrollbar {
 .navbar {
     white-space: nowrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-image: url("/images/pattern-home.jpg");
     background-size: cover;
 }
