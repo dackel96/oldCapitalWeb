@@ -2,6 +2,7 @@
 
 html {
     font-size: 14px;
+    scrollbar-width: thin;
 }
 
 @media (min-width: 768px) {
@@ -18,6 +19,7 @@ html {
 body {
     margin-bottom: 60px;
     background-color: #06191D;
+    scrollbar-width: none;
 }
 
 
@@ -38,7 +40,7 @@ body {
     height: 400px;
     float: right;
     border-radius: 50%;
-    margin-right: -55px;
+    margin-right: 25px;
 }
 
 .text-custom {
@@ -68,7 +70,7 @@ body {
 }
 
 .custom-title {
-    margin-right: 50px;
+    margin-left: 25px;
 }
 
 .accordion-button:focus {
@@ -87,10 +89,48 @@ body {
         margin-top: 20px;
         border-radius: 15px;
         outline: 0.7px solid pink;
-        width:500px;
-        height:325px;
+        width: 500px;
+        height: 325px;
     }
 
     .wraper-contact form {
         flex-basis: 50%;
     }
+
+.contact-nav {
+    float: right;
+}
+
+.banner-home {
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.banner-home {
+    position: relative;
+    border-radius: 0 0 5px 5px;
+}
+
+    .banner-home .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+.navbar {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    text-align: center;
+    margin-top: 35.8px;
+    font-size: 1rem;
+}
