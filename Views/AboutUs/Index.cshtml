@@ -1,3 +1,22 @@
-﻿@{
+﻿@model IEnumerable<ArticleViewModel>;
+
+@{
     ViewData["Title"] = "-About Us-";
+
+    var headText = Model.FirstOrDefault(x => x.Id == "head-article").Text;
 }
+
+<div class="aboutus-container">
+    <img class="aboutus-img" src="./images/about-us-banner.png" />
+    <article class="headtext-about">@headText</article>
+</div>
+
+<script>
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0) {
+            $('.aboutus-img').addClass('hidden');
+        } else {
+            $('.aboutus-img').removeClass('hidden');
+        }
+    });
+</script>

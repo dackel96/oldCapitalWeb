@@ -161,3 +161,18 @@ body::-webkit-scrollbar {
     overflow: auto;
     background-size: cover;
 }
+
+.aboutus-img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.headtext-about {
+    color: #E6E6FA;
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #1d1a23;
+    font-size: 22px;
+    padding: 15px 30px 15px 30px;
+}
